@@ -1,0 +1,9 @@
+{
+    "tasks" : {
+        "test" : "deno test --watch"
+    },
+
+    "imports" : {
+        "Assert" : "https://deno.land/std@0.220.0/assert/mod.ts"
+    }
+}

@@ -1,0 +1,25 @@
+{
+    "$schema" : "https://jsr.io/schema/config-file.v1.json" ,
+
+    "name" : "@omega/rgb" ,
+    "version" : "1.2.0" ,
+
+    "exports" : {
+        "./HSL" : "./HSL.ts" ,
+        "./Hex" : "./Hex.ts" ,
+        "." : "./mod.ts"
+    },
+
+    "publish" : {
+
+        "include" : [
+            "./Source/**/*.ts" ,
+            "./README.md" ,
+            "./LICENSE"
+        ],
+
+        "exclude" : [
+            "./**/*.test.ts"
+        ]
+    }
+}
