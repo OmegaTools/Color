@@ -23,6 +23,7 @@
         "include" : [
             "./Source/**/*.ts" ,
             "./README.md" ,
+            "./deno.json" ,
             "./LICENSE"
         ],
 
