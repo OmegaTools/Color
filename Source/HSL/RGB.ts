@@ -88,8 +88,31 @@ function toHSL (
 /**
  *  Converts RGB(A) color arrays to HSL(A) color arrays.
  *
- *  @param channels [ Red , Green , Blue , ( Alpha ) ]
- *  @returns [ Hue , Saturation , Lightness , ( Alpha ) ]
+ *  ### Examples
+ *
+ *  Conversion without alpha channel:
+ *
+ *  ```typescript
+ *  const rgb = [ 255 , 0 , 0 ] // Red
+ *
+ *  const hsl = rgbToHSL(rgb)
+ *
+ *  console.debug(hsl) // [ 0 , 100 , 50 ]
+ *  ```
+ *
+ *  Conversion with alpha channel:
+ *
+ *  ```typescript
+ *  const rgba = [ 255 , 0 , 0 , 69 ] // Green
+ *
+ *  const hsl = rgbToHSL(rgba)
+ *
+ *  console.debug(hsl) // [ 120 , 100 , 50 , 69 ]
+ *  ```
+ *
+ *  @param channels [ Red 0 - 255 , Green 0 - 255 , Blue 0 - 255 , ( Alpha 0 - 255 ) ]
+ *
+ *  @returns [ Hue 0 - 360 , Saturation 0 - 100 , Lightness 0 - 100 , ( Alpha 0 - 255 ) ]
  */
 
 function rgbToHSL (

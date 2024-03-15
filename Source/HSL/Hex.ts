@@ -7,12 +7,33 @@ import { rgbToHSL } from './RGB.ts'
 
 
 /**
- *  Parses hex color codes into their respective HSL(A) channels.
+ *  Parses a hex RGB(A) color code into a HSL(A) array.
  *
- *  @param hex Hex HSL(A) color code string.
- *  @returns Channels [ Hue , Saturation , Lightness , ( Alpha ) ] each ( 0 - 255 )
+ *  ### Examples
  *
- *  Check {@link hexToRGB} for examples
+ *  Parsing a long form RGBA hex code with alpha:
+ *
+ *  ```typescript
+ *  const hex = '#FF000069' // Red
+ *
+ *  const hsl = hexToHSL(hex)
+ *
+ *  console.debug(hsl) // [ 0 , 100 , 50 , 69 ]
+ *  ```
+ *
+ *  Parsing a short form RGB hex code without #:
+ *
+ *  ```typescript
+ *  const hex = 'F00' // Red
+ *
+ *  const hsl = hexToHSL(hex)
+ *
+ *  console.debug(hsl) // [ 0 , 100 , 50 ]
+ *  ```
+ *
+ *  @param hex Hex RGB(A) color code string.
+ *
+ *  @returns [ Hue 0 - 360 , Saturation 0 - 100 , Lightness 0 - 100 ]
  */
 
 function hexToHSL (
@@ -23,12 +44,45 @@ function hexToHSL (
 
 
 /**
- *  Attempts to parse a string with a hex color code into its respective HSL(A) channels.
+ *  Attempts to parse a string as a RGB(A) hex color code into a HSL(A) array.
  *
- *  @param hex String possibly containing a hex HSL(A) color code.
- *  @returns null if not found, otherwise Channels [ Hue , Saturation , Lightness , ( Alpha ) ] each ( 0 - 255 )
+ *  ### Examples
  *
- *  Check {@link hexToRGB} for examples
+ *  Parsing a long form RGBA hex code with alpha:
+ *
+ *  ```typescript
+ *  const hex = '#FF000069' // Red
+ *
+ *  const hsl = parseHexToHSL(hex)
+ *
+ *  console.debug(hsl) // [ 0 , 100 , 50 , 69 ]
+ *  ```
+ *
+ *  Parsing a short form RGB hex code without #:
+ *
+ *  ```typescript
+ *  const hex = 'F00' // Red
+ *
+ *  const hsl = parseHexToHSL(hex)
+ *
+ *  console.debug(hsl) // [ 0 , 100 , 50 ]
+ *  ```
+ *
+ *  Parsing an invalid hex color code:
+ *
+ *  ```typescript
+ *  const hex = 'Invalid'
+ *
+ *  const hsl = parseHexToHSL(hex)
+ *
+ *  console.debug(hsl) // null
+ *  ```
+ *
+ *  @param hex String possibly containing a hex RGB(A) color code.
+ *
+ *  @returns [ Hue 0 - 360 , Saturation 0 - 100 , Lightness 0 - 100 , ( Alpha 0 - 255 ) ]
+ *
+ *  Returns null if no color code could be matched.
  */
 
 function parseHexToHSL (

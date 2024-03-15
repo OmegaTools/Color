@@ -69,8 +69,34 @@ function toRGB (
 }
 
 
-/*
- *  [ H , S , L , (A) ] -> [ R , G , B , (A) ]
+/**
+ *  Converts a HSL(A) color array to a RGB(A) color array.
+ *
+ *  ### Examples
+ *
+ *  Conversion without alpha channel:
+ *
+ *  ```typescript
+ *  const hsl = [ 0 , 100 , 50 ] // Red
+ *
+ *  const rgb = hslToRGB(hsl)
+ *
+ *  console.debug(rgb) // [ 255 , 0 , 0 ]
+ *  ```
+ *
+ *  Conversion with alpha channel:
+ *
+ *  ```typescript
+ *  const hsl = [ 0 , 100 , 50 , 69 ] // Green
+ *
+ *  const rgb = hslToRGB(hsl)
+ *
+ *  console.debug(rgb) // [ 255 , 0 , 0 , 69 ]
+ *  ```
+ *
+ *  @param channels [ Hue 0 - 360 , Saturation 0 - 100 , Lightness 0 - 100 , ( Alpha 0 - 255 ) ]
+ *
+ *  @returns [ Red 0 - 255 , Green 0 - 255 , Blue 0 - 255 , ( Alpha 0 - 255 ) ]
  */
 
 function hslToRGB (

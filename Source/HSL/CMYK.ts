@@ -58,8 +58,9 @@ function toHSL (
  *  console.debug(hsl) // [ 120 , 100 , 50 , 69 ]
  *  ```
  *
- *  @param channels [ Cyan , Magenta , Yellow , Key , ( Alpha ) ]
- *  @returns [ Hue , Saturation , Lightness , ( Alpha ) ]
+ *  @param cmyk [ 𝗖𝘆𝗮𝗻 0 - 100 , 𝗠𝗮𝗴𝗲𝗻𝘁𝗮 0 - 100 , 𝗬𝗲𝗹𝗹𝗼𝘄 0 - 100 , 𝗞𝗲𝘆 0 - 100 , ( 𝗔𝗹𝗽𝗵𝗮 0 - 255 ) ]
+ *
+ *  @returns [ Hue 0 - 360 , Saturation 0 - 100  , Lightness 0 - 100 , ( Alpha 0 - 255 ) ]
  */
 
 function cmykToHSL (

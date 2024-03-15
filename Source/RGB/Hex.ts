@@ -40,41 +40,33 @@ function matchChannels ( hex : string ){
 
 
 /**
- *  Parses hex color codes into their respective RGB(A) channels.
+ *  Parses a hex RGB(A) color code into a RGB(A) array.
+ *
+ *  ### Examples
+ *
+ *  Parsing a long form RGBA hex code with alpha:
+ *
+ *  ```typescript
+ *  const hex = '#FF000069' // Red
+ *
+ *  const rgb = hexToRGB(hex)
+ *
+ *  console.debug(rgb) // [ 255 , 0 , 0 , 69 ]
+ *  ```
+ *
+ *  Parsing a short form RGB hex code without #:
+ *
+ *  ```typescript
+ *  const hex = 'F00' // Red
+ *
+ *  const rgb = hexToRGB(hex)
+ *
+ *  console.debug(rgb) // [ 255 , 0 , 0 ]
+ *  ```
  *
  *  @param hex Hex RGB(A) color code string.
- *  @returns Channels [ Red , Green , Blue , ( Alpha ) ] each ( 0 - 255 )
  *
- *
- *  ## Examples
- *
- *  Long form RGBA color codes:
- *
- *  ```typescript
- *  hexToRGB('#AABBCCDD')
- *  hexToRGB('AABBCCDD')
- *  ```
- *
- *  Long form RGB color codes:
- *
- *  ```typescript
- *  hexToRGB('#AABBCC')
- *  hexToRGB('AABBCC')
- *  ```
- *
- *  Short form RGBA color codes:
- *
- *  ```typescript
- *  hexToRGB('#ABCD')
- *  hexToRGB('ABCD')
- *  ```
- *
- *  Short form RGB color codes:
- *
- *  ```typescript
- *  hexToRGB('#ABC')
- *  hexToRGB('ABC')
- *  ```
+ *  @returns [ Hue 0 - 360 , Saturation 0 - 100 , Lightness 0 - 100 ]
  */
 
 function hexToRGB (
@@ -85,12 +77,45 @@ function hexToRGB (
 
 
 /**
- *  Attempts to parse a string with a hex color code into its respective RGB(A) channels.
+ *  Attempts to parse a string as a RGB(A) hex color code into a RGB(A) array.
  *
- *  @param hex String possibly containing a hex RGB(A) color code.
- *  @returns null if not found, otherwise Channels [ Red , Green , Blue , ( Alpha ) ] each ( 0 - 255 )
+ *  ### Examples
  *
- *  Check {@link hexToRGB} for examples
+ *  Parsing a long form RGBA hex code with alpha:
+ *
+ *  ```typescript
+ *  const hex = '#FF000069' // Red
+ *
+ *  const rgb = parseHexToRGB(hex)
+ *
+ *  console.debug(rgb) // [ 255 , 0 , 0  , 69 ]
+ *  ```
+ *
+ *  Parsing a short form RGB hex code without #:
+ *
+ *  ```typescript
+ *  const hex = 'F00' // Red
+ *
+ *  const rgb = parseHexToRGB(hex)
+ *
+ *  console.debug(rgb) // [ 255 , 0 , 0 ]
+ *  ```
+ *
+ *  Parsing an invalid hex color code:
+ *
+ *  ```typescript
+ *  const hex = 'Invalid'
+ *
+ *  const rgb = parseHexToRGB(hex)
+ *
+ *  console.debug(rgb) // null
+ *  ```
+ *
+ *  @param hex Hex RGB(A) color code string.
+ *
+ *  @returns [ Hue 0 - 360 , Saturation 0 - 100 , Lightness 0 - 100 , ( Alpha 0 - 255 ) ]
+ *
+ *  Returns null if no color code could be matched.
  */
 
 function parseHexToRGB (
