@@ -1,9 +1,33 @@
 {
     "tasks" : {
+        "publish:dry" : "npx jsr publish --dry-run" ,
         "test" : "deno test --watch"
     },
 
     "imports" : {
         "Assert" : "https://deno.land/std@0.220.0/assert/mod.ts"
+    },
+
+
+    "name" : "@omega/color" ,
+    "version" : "1.2.2" ,
+
+    "exports" : {
+        "./HSL" : "./Source/HSL/mod.ts" ,
+        "./RGB" : "./Source/RGB/mod.ts" ,
+        "." : "./Source/mod.ts"
+    },
+
+    "publish" : {
+
+        "include" : [
+            "./Source/**/*.ts" ,
+            "./README.md" ,
+            "./LICENSE"
+        ],
+
+        "exclude" : [
+            "./**/*.test.ts"
+        ]
     }
 }
