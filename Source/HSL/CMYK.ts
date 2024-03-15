@@ -34,9 +34,11 @@ function toHSL (
 
 
 /**
- *  Converts CMYK(A) color arrays to HSL(A) color arrays.
+ *  Converts a CMYK(A) color array to a HSL(A) color array.
  *
- *  ### Example
+ *  ### Examples
+ *
+ *  Conversion without alpha channel:
  *
  *  ```typescript
  *  const cmyk = [ 0 , 100 , 100 , 0 ] // Red
@@ -44,6 +46,16 @@ function toHSL (
  *  const hsl = cmykToHSL(cmyk)
  *
  *  console.debug(hsl) // [ 0 , 100 , 50 ]
+ *  ```
+ *
+ *  Conversion with alpha channel:
+ *
+ *  ```typescript
+ *  const cmyka = [ 100 , 0 , 100 , 0 , 69 ] // Green
+ *
+ *  const hsl = cmykToHSL(cmyka)
+ *
+ *  console.debug(hsl) // [ 120 , 100 , 50 , 69 ]
  *  ```
  *
  *  @param channels [ Cyan , Magenta , Yellow , Key , ( Alpha ) ]
