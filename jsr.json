@@ -1,0 +1,24 @@
+{
+    "name" : "@omega/color" ,
+    "version" : "1.2.10" ,
+
+    "exports" : {
+        "./HSL" : "./Source/HSL/mod.ts" ,
+        "./RGB" : "./Source/RGB/mod.ts" ,
+        "." : "./Source/mod.ts"
+    },
+
+    "publish" : {
+
+        "include" : [
+            "./Source/**/*.ts" ,
+            "./README.md" ,
+            "./jsr.json" ,
+            "./LICENSE"
+        ],
+
+        "exclude" : [
+            "./**/*.test.ts"
+        ]
+    }
+}
