@@ -9,7 +9,7 @@
 
 <br>
 
-[![Badge Stars]][Stars]   
+[![Badge Stars]][Stars]
 
 </div>
 

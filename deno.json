@@ -10,7 +10,7 @@
 
 
     "name" : "@omega/color" ,
-    "version" : "1.2.3" ,
+    "version" : "1.2.4" ,
 
     "exports" : {
         "./HSL" : "./Source/HSL/mod.ts" ,
