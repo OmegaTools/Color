@@ -1,6 +1,8 @@
 {
+    "$schema" : "https://jsr.io/schema/config-file.v1.json" ,
+
     "name" : "@omega/color" ,
-    "version" : "1.2.10" ,
+    "version" : "1.2.11" ,
 
     "exports" : {
         "./HSL" : "./Source/HSL/mod.ts" ,
