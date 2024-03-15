@@ -1,4 +1,10 @@
 
+/**
+ *  @module
+ *
+ *  Hex code to RGB(A) conversion functions.
+ */
+
 export { parseHexToRGB , hexToRGB }
 
 

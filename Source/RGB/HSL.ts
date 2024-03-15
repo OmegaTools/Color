@@ -1,4 +1,10 @@
 
+/**
+ *  @module
+ *
+ *  HSL(A) to RGB(A) conversion functions.
+ */
+
 export { hslToRGB }
 
 

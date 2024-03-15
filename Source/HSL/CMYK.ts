@@ -1,4 +1,10 @@
 
+/**
+ *  @module
+ *
+ *  CMYK(A) to HSL(A) conversion functions.
+ */
+
 export { cmykToHSL }
 
 import { rgbToHSL } from './RGB.ts'
