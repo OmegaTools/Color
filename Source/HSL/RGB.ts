@@ -110,9 +110,9 @@ function toHSL (
  *  console.debug(hsl) // [ 120 , 100 , 50 , 69 ]
  *  ```
  *
- *  @param channels [ Red 0 - 255 , Green 0 - 255 , Blue 0 - 255 , ( Alpha 0 - 255 ) ]
+ *  @param channels [ 𝗥𝗲𝗱 0 - 255 , 𝗚𝗿𝗲𝗲𝗻 0 - 255 , 𝗕𝗹𝘂𝗲 0 - 255 , ( 𝗔𝗹𝗽𝗵𝗮 0 - 255 ) ]
  *
- *  @returns [ Hue 0 - 360 , Saturation 0 - 100 , Lightness 0 - 100 , ( Alpha 0 - 255 ) ]
+ *  @returns [ 𝗛𝘂𝗲 0 - 360 , 𝗦𝗮𝘁𝘂𝗿𝗮𝘁𝗶𝗼𝗻 0 - 100 , 𝗟𝗶𝗴𝗵𝘁𝗻𝗲𝘀𝘀 0 - 100 , ( 𝗔𝗹𝗽𝗵𝗮 0 - 255 ) ]
  */
 
 function rgbToHSL (

@@ -66,7 +66,7 @@ function matchChannels ( hex : string ){
  *
  *  @param hex Hex RGB(A) color code string.
  *
- *  @returns [ Hue 0 - 360 , Saturation 0 - 100 , Lightness 0 - 100 ]
+ *  @returns [ 𝗛𝘂𝗲 0 - 360 , 𝗦𝗮𝘁𝘂𝗿𝗮𝘁𝗶𝗼𝗻 0 - 100 , 𝗟𝗶𝗴𝗵𝘁𝗻𝗲𝘀𝘀 0 - 100 ]
  */
 
 function hexToRGB (
@@ -113,7 +113,7 @@ function hexToRGB (
  *
  *  @param hex Hex RGB(A) color code string.
  *
- *  @returns [ Hue 0 - 360 , Saturation 0 - 100 , Lightness 0 - 100 , ( Alpha 0 - 255 ) ]
+ *  @returns [ 𝗛𝘂𝗲 0 - 360 , 𝗦𝗮𝘁𝘂𝗿𝗮𝘁𝗶𝗼𝗻 0 - 100 , 𝗟𝗶𝗴𝗵𝘁𝗻𝗲𝘀𝘀 0 - 100 , ( 𝗔𝗹𝗽𝗵𝗮 0 - 255 ) ]
  *
  *  Returns null if no color code could be matched.
  */
